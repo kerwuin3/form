@@ -1,2 +1,2 @@
 # form
-Interactive and responsive form with field validation. Developed with HTML, CSS, and JavaScript.
+Interactive and responsive form with field validation. Developed with Nextjs 16, SCSS.
