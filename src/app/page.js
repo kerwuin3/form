@@ -1,11 +1,17 @@
-import styles from "../styles/page.module.css";
+import styles from '../styles/home.module.scss';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1>Hola Mundo</h1>
-      </main>
+    <>
+    <Navbar />
+    <div className={styles.hero}>
+      <h1 className={styles.heroTitle}>
+        Welcome to Back!
+      </h1>
     </div>
+    <Footer />
+    </>
   );
 }

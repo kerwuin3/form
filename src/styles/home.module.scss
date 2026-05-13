@@ -1,0 +1,12 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100dvh - 90px);
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: clamp(2.188rem, 2.813vw + 1.625rem, 5.000rem);
+  color: var(--moonlight);
+}

@@ -1,0 +1,12 @@
+.footer {
+  height: 30px;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: clamp(0.625rem, 0.625vw + 0.500rem, 1.250rem);
+  color: var(--moonlight);  
+}
