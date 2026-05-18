@@ -6,10 +6,75 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--noir);
 }
 
 .logoText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 25px;
   color: var(--moonlight);
+  padding-left: 20px;
+  letter-spacing: -0.02em;
+
+  svg {    
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  span {
+    color: #7494ec;
+  }
 }
 
+.btns {
+  padding-right: 20px; 
+}
+
+.btnLogin {
+  border: 2px solid var(--deep-ocean);
+  padding: 12px 24px;
+  right: 20px;
+  border-radius: 6px;
+  background: transparent;
+  transition: .3s;
+  margin-right: 20px;
+
+  a {
+    font-size: 16px;
+    color: #1B3B6F;
+    text-decoration: none;
+  }
+}
+
+.btnLogin:hover {
+  background: #1B3B6F;
+
+  a {
+    color: white;
+  }
+}
+
+.btnSignup {
+  border: 2px solid #1B3B6F;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: #1B3B6F;
+  transition: .3s;
+
+  a {
+    font-size: 16px;
+    color: white;
+    
+    text-decoration: none;
+  }
+}
+
+.btnSignup:hover {
+  background: transparent;  
+
+  a {
+    color: #1B3B6F;
+  }
+}

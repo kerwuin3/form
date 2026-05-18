@@ -1,0 +1,41 @@
+.hero {
+  min-height: calc(100dvh - 90px); // Resta 60px (navbar) + 30px (footer)
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+  font-weight: 400;
+
+  svg {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.heroTitle {
+  font-size: clamp(3.125rem, 3.125vw + 2.500rem, 6.250rem);  
+}
+
+.logo {
+  font-size: clamp(1.563rem, 1.563vw + 1.250rem, 3.125rem);
+  span{
+    color: #1B3B6F;
+  }
+}

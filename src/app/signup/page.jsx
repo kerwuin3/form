@@ -1,11 +1,11 @@
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
-import styles from '../../styles/signup.module.scss';
+import styles from './signup.module.scss';
 import Link from 'next/link';
 
 export default function Signup() {  
   return (
     <div className={styles.formContainer}>
-      <form className={styles.form-box}>
+      <form className={styles.formBox}>
         <h1>Registration</h1>
 
         <div className={styles.inputBox}>
