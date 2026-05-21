@@ -1,9 +1,26 @@
 .hero {
-  min-height: calc(100dvh - 90px); // Resta 60px (navbar) + 30px (footer)
   display: grid;
   place-items: center;
+  min-height: calc(100dvh - 90px);
   padding: 20px;
 }
+
+.heroBgWrapper {
+  position: absolute;
+  width: 900px;
+  height: 600px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .heroBg {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+  }
+}
+
 
 .heroContent {
   display: flex;
@@ -14,9 +31,11 @@
   width: 100%;
   max-width: 600px;
   padding: 40px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(var(--deep-ocean), 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--moonlight);
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(var(--moonlight), 1);
   gap: 15px;
   font-weight: 400;
 
@@ -35,7 +54,8 @@
 
 .logo {
   font-size: clamp(1.563rem, 1.563vw + 1.250rem, 3.125rem);
+  
   span{
-    color: #1B3B6F;
+    color: var(--blue-light);
   }
 }

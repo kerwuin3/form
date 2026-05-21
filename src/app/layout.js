@@ -1,12 +1,4 @@
-import { Roboto } from 'next/font/google';
 import './globals.scss'
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // Los pesos que prefieras
-  variable: '--font-roboto',
-  display: 'swap',
-});
 
 export const metadata = {  
   title: 'Form kwnDev',
@@ -37,7 +29,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} antialiased`}>
+    <html lang="en">
       <body>
         {children}
       </body>

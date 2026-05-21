@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--noir);
+  background: var(--grey-light);
 }
 
 .logoText {
@@ -24,7 +24,7 @@
   }
 
   span {
-    color: #7494ec;
+    color: var(--blue-light);
   }
 }
 
@@ -33,7 +33,7 @@
 }
 
 .btnLogin {
-  border: 2px solid var(--deep-ocean);
+  border: 2px solid var(--blue-light);
   padding: 12px 24px;
   right: 20px;
   border-radius: 6px;
@@ -43,13 +43,13 @@
 
   a {
     font-size: 16px;
-    color: #1B3B6F;
+    color: var(--blue-light);
     text-decoration: none;
   }
 }
 
 .btnLogin:hover {
-  background: #1B3B6F;
+  background: var(--blue-light);
 
   a {
     color: white;
@@ -57,10 +57,10 @@
 }
 
 .btnSignup {
-  border: 2px solid #1B3B6F;
+  border: 2px solid var(--blue-light);
   padding: 12px 24px;
   border-radius: 6px;
-  background: #1B3B6F;
+  background: var(--blue-light);
   transition: .3s;
 
   a {
@@ -75,6 +75,6 @@
   background: transparent;  
 
   a {
-    color: #1B3B6F;
+    color: var(--blue-light);
   }
 }

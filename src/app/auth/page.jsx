@@ -1,6 +1,6 @@
 //import { FaRegUser, FaLock } from 'react-icons/fa';
 import { LuUser, LuLockKeyhole, LuLogIn  } from "react-icons/lu";
-import styles from './login.module.scss';
+import styles from './auth.module.scss';
 import Link from 'next/link';
 import SocialIcon from '../../components/socialIcon';
 import Image from 'next/image';
@@ -16,14 +16,14 @@ const montserrat = Montserrat({
   weight: ['400', '500', '700'],
 })
 
-export default function Login() {
+export default function Auth() {
   return (
     <div className={styles.container}>
       <Image className={styles.img} src='/assets/secure-login.svg' alt="login illustration" width={500} height={500} priority/>
       <div className={styles.wrapper}>
         <div className={styles.formHeader}>
           <div className={styles.title}>
-            <h1 className={`${styles.titleLogin} ${lobster.className}`}>Sign In</h1>
+            <h1 className={`${styles.titleLogin} ${lobster.className} antialiased`}>Sign In</h1>
           </div>
         </div>
         <div className={styles.inputWraper}>
@@ -32,11 +32,11 @@ export default function Login() {
               <input
                 type='text'
                 id='user'
-                className={`${styles.inputField} ${montserrat.className}`}
+                className={`${styles.inputField} ${montserrat.className} antialiased`}
                 autoComplete='off'
                 required
               />
-              <label htmlFor='user' className={`${styles.label} ${montserrat.className}`}>
+              <label htmlFor='user' className={`${styles.label} ${montserrat.className} antialiased`}>
                 Username
               </label>
               <LuUser className={styles.icon} />
@@ -45,39 +45,39 @@ export default function Login() {
               <input
                 type='password'
                 id='pass'
-                className={`${styles.inputField} ${montserrat.className}`}
+                className={`${styles.inputField} ${montserrat.className} antialiased`}
                 autoComplete='off'
                 required
               />
-              <label htmlFor='pass' className={`${styles.label} ${montserrat.className}`}>
+              <label htmlFor='pass' className={`${styles.label} ${montserrat.className} antialiased`}>
                 Password
               </label>
               <LuLockKeyhole className={styles.icon} />
             </div>
-            <div className={`${styles.forgotLink} ${montserrat.className}`}>
+            <div className={`${styles.forgotLink} ${montserrat.className} antialiased`}>
             <Link href='/forgot'>
               Forgot Password?
             </Link>
           </div>
             <div className={styles.inputBox}>
-              <button type='submit' className={`${styles.btnSubmit} ${montserrat.className}`}>
+              <button type='submit' className={`${styles.btnSubmit} ${montserrat.className} antialiased`}>
                 Sign In
                 <LuLogIn className={styles.iconSub} />
               </button>
             </div>
+            </form>          
             <div className={styles.socialWrapper}>
-            <p className={`${montserrat.className} ${styles.socialText}`}>
-              or login with social platforms
-            </p>
+            <div className={`${montserrat.className} ${styles.dividerText}`}>
+              <span>OR</span>
+            </div>
               <SocialIcon />
             </div>
-            <p className={`${styles.toggleText} ${montserrat.className}`}>
+            <p className={`${styles.toggleText} ${montserrat.className} antialiased`}>
             Don&apos;t have an account?
-            <Link href='signup' className={`${styles.toggleLink} ${montserrat.className}`}>
+            <Link href='signup' className={`${styles.toggleLink} ${montserrat.className} antialiased`}>
               Register
             </Link>
           </p>
-          </form>          
         </div>
       </div>
     </div>

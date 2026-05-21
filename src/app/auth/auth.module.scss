@@ -187,6 +187,31 @@
   }
 }
 
+.dividerText {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--midnight-sky);
+  font-size: 14px;
+  margin: 20px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+  }
+
+  &::before {
+    margin-right: 16px;
+  }
+
+  &::after {
+    margin-left: 16px;
+  }
+}
+
 .socialWrapper {
   text-align: center;
 }
