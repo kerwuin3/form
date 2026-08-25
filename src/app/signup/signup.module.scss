@@ -237,3 +237,169 @@
     }
   }
 }
+
+
+// Imput password -------
+
+
+.strengthRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  color: #87929e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.strengthRow strong {
+  color: #2da65c;
+}
+
+.strengthRow.weak strong {
+  color: #d64545;
+}
+
+.strengthRow.medium strong {
+  color: #d69e2e;
+}
+
+.progress {
+  height: 5px;
+  margin-top: 7px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #dce7df;
+}
+
+.progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #2da65c;
+  transition: width 420ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.progress.weak {
+  background: #f4d6d6;
+}
+
+.progress.weak span {
+  background: #d64545;
+}
+
+.progress.medium {
+  background: #f5e7c5;
+}
+
+.progress.medium span {
+  background: #d69e2e;
+}
+
+.requirements {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 13px;
+  color: #2d9e59;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.requirements span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.requirements svg {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+}
+
+.requirements svg circle {
+  transition: fill 220ms ease, transform 220ms ease;
+  transform-origin: center;
+}
+
+.requirements svg path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+}
+
+.requirements .valid {
+  animation: requirementIn 420ms both;
+}
+
+.requirements .valid svg circle {
+  fill: #2da65c;
+  animation: checkPop 360ms cubic-bezier(.175, .885, .32, 1.275) both;
+}
+
+.requirements .valid svg path {
+  animation: drawCheck 420ms 100ms ease-out forwards;
+}
+
+.requirements .invalid {
+  color: #aab4bf;
+}
+
+.requirements .invalid svg circle {
+  fill: #dce3e8;
+}
+
+@keyframes requirementIn {
+  from {
+    opacity: .45;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(.5);
+  }
+
+  70% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCheck {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .progress span,
+  .requirements span,
+  .requirements svg circle {
+    transition: none;
+  }
+
+  .requirements .valid,
+  .requirements .valid svg circle,
+  .requirements .valid svg path {
+    animation: none;
+  }
+
+  .requirements .valid svg path {
+    stroke-dashoffset: 0;
+  }
+}

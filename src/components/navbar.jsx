@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={`${styles.logoText} ${lobster.className}`}>        
         <TbDeviceDesktopCode />
-        &lt;kwn<span>Dev </span>/&gt;
+        &lt; kwn<span>Dev </span>/&gt;
       </div>
       <div className={styles.btns}>
         <button className={styles.btnLogin}>
