@@ -100,7 +100,7 @@ export default function Signup() {
                   onClick={() => setVisible((current) => !current)}
                   aria-label={visible ? 'Show' : 'Hide'}
                 >
-                  {visible ? <LuEyeClosed /> : <LuEye />}
+                  {visible ? <LuEye /> : <LuEyeClosed />}
                 </div>
               )}
 
